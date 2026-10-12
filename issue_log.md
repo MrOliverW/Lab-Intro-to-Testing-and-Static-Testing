@@ -1,6 +1,6 @@
 - Location - Line 12
 - Issue - unnecessary comma
-- Explanation - this seems to be a random user error
+- Explanation - this seems to be a random user error which will result in a failure
 - Suggested fix - delete comma
 - Status - Fixed
 
@@ -16,7 +16,7 @@
 
 - Location - Line 21
 - Issue - name should not have quotaitons around it
-- Explanation - that treats it as a string instead of as a class
+- Explanation - that treats it as a string instead of as a class - the root cause may be a misunderstanding of typescript
 - Suggested fix - remove the quotations
 - Status - Fixed
 
@@ -33,3 +33,6 @@
 - Explanation - the 2nd $ is likely to cause an error
 - Suggested fix - remove the 2nd dollar sign as it's currently a defect 
 - Status - Fixed
+
+
+ESLint indicated the test suite wans't properly configurated. I never took a typescript class...
