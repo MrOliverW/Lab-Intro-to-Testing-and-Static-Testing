@@ -13,19 +13,19 @@ const ITEMS = [
 ];
 
 export function addItem(name: string, price: number) {
-  const newItem = { "name" = name, "price" = price };
+  const newItem = { name = "name", price = "price" };
   ITEMS.push(newItem);
 }
 
 export function deleteItem(name: string) {
-  const idx = ITEMS.indexOf("name");
+  const idx = ITEMS.indexOf(name);
   ITEMS.pop();
   return ITEMS;
 }
 
 export function total() {
   for (const i of 3) {
-    total = total + ITEMS[i]["price"];
+    total = ITEMS[i] * ITEMS[i].price;
   }
   return total;
 }
@@ -43,7 +43,7 @@ export function printReceipt(taxRate: number) {
   }
 
   console.log("************************");
-  console.log(`Subtotal: $${String(total)}`);
+  console.log(`Subtotal: ${String(total)}`);
   console.log(`Tax: $ + ${String(taxRate)}");
   console.log(`Total: $ + ${tax(String(taxRate))}");
 }
